@@ -1,4 +1,4 @@
-module github.com/Gemba-Kaizen/menumeister-authservice
+module github.com/Gemba-Kaizen/menu-service
 
 go 1.19
 

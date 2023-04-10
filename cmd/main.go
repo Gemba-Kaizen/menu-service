@@ -5,12 +5,12 @@ import (
 	"log"
 	"net"
 
-	"github.com/Gemba-Kaizen/menumeister-authservice/config"
-	"github.com/Gemba-Kaizen/menumeister-authservice/internal/db"
-	repository "github.com/Gemba-Kaizen/menumeister-authservice/internal/repository/merchant"
-	api "github.com/Gemba-Kaizen/menumeister-authservice/pkg/api/auth"
-	"github.com/Gemba-Kaizen/menumeister-authservice/pkg/pb"
-	services "github.com/Gemba-Kaizen/menumeister-authservice/pkg/services/auth"
+	"github.com/Gemba-Kaizen/menu-service/config"
+	"github.com/Gemba-Kaizen/menu-service/internal/db"
+	repository "github.com/Gemba-Kaizen/menu-service/internal/repository/merchant"
+	api "github.com/Gemba-Kaizen/menu-service/pkg/api/auth"
+	"github.com/Gemba-Kaizen/menu-service/pkg/pb"
+	services "github.com/Gemba-Kaizen/menu-service/pkg/services/auth"
 	"google.golang.org/grpc"
 )
 

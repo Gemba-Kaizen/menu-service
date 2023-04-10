@@ -3,8 +3,8 @@ package api
 import (
 	"context"
 
-	pb "github.com/Gemba-Kaizen/menumeister-authservice/pkg/pb"
-	"github.com/Gemba-Kaizen/menumeister-authservice/pkg/services/auth"
+	pb "github.com/Gemba-Kaizen/menu-service/pkg/pb"
+	"github.com/Gemba-Kaizen/menu-service/pkg/services/auth"
 )
 
 type AuthHandler struct {

@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"github.com/Gemba-Kaizen/menumeister-authservice/internal/db"
-	"github.com/Gemba-Kaizen/menumeister-authservice/internal/models"
+	"github.com/Gemba-Kaizen/menu-service/internal/db"
+	"github.com/Gemba-Kaizen/menu-service/internal/models"
 )
 
 type MerchantRepository struct {

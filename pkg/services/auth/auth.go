@@ -4,10 +4,10 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/Gemba-Kaizen/menumeister-authservice/internal/models"
-	repository "github.com/Gemba-Kaizen/menumeister-authservice/internal/repository/merchant"
-	"github.com/Gemba-Kaizen/menumeister-authservice/pkg/pb"
-	"github.com/Gemba-Kaizen/menumeister-authservice/pkg/services"
+	"github.com/Gemba-Kaizen/menu-service/internal/models"
+	repository "github.com/Gemba-Kaizen/menu-service/internal/repository/merchant"
+	"github.com/Gemba-Kaizen/menu-service/pkg/pb"
+	"github.com/Gemba-Kaizen/menu-service/pkg/services"
 )
 
 type AuthService struct {

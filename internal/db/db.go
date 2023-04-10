@@ -3,7 +3,7 @@ package db
 import (
 	"log"
 
-	"github.com/Gemba-Kaizen/menumeister-authservice/internal/models"
+	"github.com/Gemba-Kaizen/menu-service/internal/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )

@@ -4,7 +4,7 @@ import (
 	"errors"
 	"time"
 
-	"github.com/Gemba-Kaizen/menumeister-authservice/internal/models"
+	"github.com/Gemba-Kaizen/menu-service/internal/models"
 	"github.com/golang-jwt/jwt"
 )
 
