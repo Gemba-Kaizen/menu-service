@@ -20,7 +20,7 @@ func Init(url string) Handler {
   }
 
 	// Migrate db for every model you have
-	db.AutoMigrate(&models.Merchant{})
+	db.AutoMigrate(&models.FoodItem{})
 
 	return Handler{db}
 }

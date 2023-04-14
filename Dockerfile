@@ -5,8 +5,8 @@ WORKDIR /app
 COPY . .
 RUN go mod download
 
-RUN CGO_ENABLED=0 GOOS=linux go build -o /authservice ./cmd/main.go
+RUN CGO_ENABLED=0 GOOS=linux go build -o /menuservice ./cmd/main.go
 
-EXPOSE 50051
+EXPOSE 50052
 
-CMD [ "/authservice" ]
+CMD [ "/menuservice" ]

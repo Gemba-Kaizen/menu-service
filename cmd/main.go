@@ -7,10 +7,9 @@ import (
 
 	"github.com/Gemba-Kaizen/menu-service/config"
 	"github.com/Gemba-Kaizen/menu-service/internal/db"
-	repository "github.com/Gemba-Kaizen/menu-service/internal/repository/merchant"
-	api "github.com/Gemba-Kaizen/menu-service/pkg/api/auth"
+	repository "github.com/Gemba-Kaizen/menu-service/internal/repository/menu"
+	api "github.com/Gemba-Kaizen/menu-service/pkg/api/menu"
 	"github.com/Gemba-Kaizen/menu-service/pkg/pb"
-	services "github.com/Gemba-Kaizen/menu-service/pkg/services/auth"
 	"google.golang.org/grpc"
 )
 
@@ -24,13 +23,10 @@ func main() {
 	// Init DB
 	h := db.Init(c.DBUrl)
 
-	// Init authService
-	authService := &services.AuthService{
-		MerchantRepo: &repository.MerchantRepository{H: &h},
-	}
+	menuRepo := &repository.MenuRepository{H: &h}
 
 	// Init handlers
-	authHandler := &api.AuthHandler{AuthService: authService}
+	menuHandler := &api.MenuHandler{MenuRepo: menuRepo}
 
 	lis, err := net.Listen("tcp", c.Port)
 
@@ -43,7 +39,7 @@ func main() {
 	grpcService := grpc.NewServer()
 
 	// Register each handler endpoint to grpc Server
-	pb.RegisterAuthServiceServer(grpcService, authHandler)
+	pb.RegisterMenuServiceServer(grpcService, menuHandler)
 	// pb.RegisterService2ServiceServer(grpcServer, service2Handler)
 
 	if err := grpcService.Serve(lis); err != nil {

@@ -9,4 +9,4 @@ db:
 		docker-compose up -d
 
 docker:
-	docker build --tag authservice .
+	docker build --tag menuservice .
